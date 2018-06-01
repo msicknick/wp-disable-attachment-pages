@@ -1,7 +1,7 @@
 <?php
 /*
  *  Plugin Name:  WP Disable Attachment Pages
- *  Plugin URI:   https://developer.wordpress.org/plugins/the-basics/
+ *  Plugin URI:   https://github.com/msicknick/wp-disable-attachment-pages/
  *  Description:  Disables direct access to attachment pages
  *  Version:      1.1.0
  *  Author:       Magda Sicknick
