@@ -14,16 +14,16 @@ Redirects attachment pages to the parent post, or home page if no parent post ex
 == Description ==
 * Redirects attachment pages to the parent post, or home page if no parent post exists. 
 * Hides permalinks when editing/uploading attachments. 
-* Disables \'Link to\' option when inserting media to a post/page.
+* Disables 'Link to' option when inserting media to a post/page.
 
 == Installation ==
   Upload the WP Disable Attachment Pages plugin to your blog and Activate it.
-  That\'s it!
+  That's it!
 
 == Changelog ==
  = Version 1.1.0 (06/01/2018) =
  * Added function to hide permalink from the Edit Media screen
- * Removed \'Link to\' option when inserting media to a post/page
+ * Removed 'Link to' option when inserting media to a post/page
 
  = Version 1.0.0 (05/18/2018) =
  * Initial release
