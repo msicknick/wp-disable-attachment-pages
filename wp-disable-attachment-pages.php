@@ -3,15 +3,21 @@
  *  Plugin Name:  WP Disable Attachment Pages
  *  Plugin URI:   https://github.com/msicknick/wp-disable-attachment-pages/
  *  Description:  Disables direct access to attachment pages
- *  Version:      1.1.0
+ *  Version:      1.2.0
  *  Author:       Magda Sicknick
  *  Author URI:   https://www.msicknick.com/
  *  License:      GPL2
  *  License URI:  https://www.gnu.org/licenses/gpl-2.0.html
- *  Text Domain:  wpdap
+ *  Text Domain:  wp-disable-attachments
  */
 
-defined('ABSPATH') or die('No script kiddies please!');
+/**
+ * Exit if accessed directly
+ * @since 1.1.0
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Redirects attachment pages to the parent post, or home page if no parent post exists.
@@ -34,7 +40,7 @@ function wpdap_redirect_attachment_page() {
 add_action('template_redirect', 'wpdap_redirect_attachment_page', 1);
 
 /**
- * Hide permalinks when editing/uploading attachments
+ * Hide permalinks when editing attachments
  * @since 1.1.0
  */
 function wpdap_hide_attachment_permalink() {
@@ -71,3 +77,19 @@ function wpdap_disable_linkto() {
 
 }
 add_action('admin_head', 'wpdap_disable_linkto');
+
+/**
+ * Hide 'View attachment page' link when viewing Attachment Details
+ * @since 1.2.0
+ */
+function wpdap_hide_viewattachment() {
+    ?>
+    <style>
+        .actions .view-attachment {
+            display: none !important;
+        }
+    </style>
+    <?php
+
+}
+add_action('admin_head', 'wpdap_hide_viewattachment');
